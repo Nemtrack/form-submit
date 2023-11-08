@@ -40,7 +40,11 @@ export class RegisterComponent implements OnInit {
       (data) => console.log(data),
       (error) => console.log(error)
     );
-    this.partner = new Partner();
+    this.partner = new Partner(
+      0,
+      this.partnerName?.value,
+      this.partnerEmail?.value
+    );
   }
 
   get partnerName() {

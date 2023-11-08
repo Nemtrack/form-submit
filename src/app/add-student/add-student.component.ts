@@ -9,6 +9,7 @@ import { StudentService } from '../shared/student/student.service';
 })
 export class AddStudentComponent implements OnInit {
   student: Student = {
+    student_id: 0,
     student_name: '',
     student_email: '',
     student_branch: '',
@@ -41,6 +42,7 @@ export class AddStudentComponent implements OnInit {
         student_name: this.studentsaveform.get('student_name')!.value,
         student_email: this.studentsaveform.get('student_email')!.value,
         student_branch: this.studentsaveform.get('student_branch')!.value,
+        student_id: 0,
       };
       this.submitted = true;
       this.save();
